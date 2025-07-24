@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
 
 // ! Layouts
 import MainLayout from "../layouts/MainLayout.jsx";
@@ -52,7 +53,6 @@ function Notes() {
   // ! HandleSearch
   function handleSearch(title) {
     setInputSearch(title);
-    console.log(title);
   }
 
   // ! Filter Data
@@ -61,21 +61,19 @@ function Notes() {
   });
 
   return (
-    <>
-      <div>
-        {/* Layout */}
-        <MainLayout handleSearch={handleSearch}>
-          <Form handleAddNotes={handleAddNotes} />
-          <Arship
-            filterInitialData={filterInitialData}
-            showDataArship={showDataArship}
-            handleAddNotesArship={handleAddNotesArship}
-            handleDeleteNotes={handleDeleteNotes}
-            handleDeleteNotesArship={handleDeleteNotesArship}
-          />
-        </MainLayout>
-      </div>
-    </>
+    <div>
+      {/* Layout */}
+      <MainLayout handleSearch={handleSearch}>
+        <Form handleAddNotes={handleAddNotes} />
+        <Arship
+          filterInitialData={filterInitialData}
+          showDataArship={showDataArship}
+          handleAddNotesArship={handleAddNotesArship}
+          handleDeleteNotes={handleDeleteNotes}
+          handleDeleteNotesArship={handleDeleteNotesArship}
+        />
+      </MainLayout>
+    </div>
   );
 }
 

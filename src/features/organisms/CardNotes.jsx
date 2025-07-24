@@ -1,3 +1,5 @@
+import React from "react";
+
 // atoms
 import Heading from "../Fragments/Heading";
 import Paragraph from "../Fragments/Paragraph";
@@ -12,7 +14,7 @@ function List({ filterInitialData, handleAddNotesArship, handleDeleteNotes }) {
   };
 
   // List
-  const list = filterInitialData.map((note) => (
+  const list = filterInitialData.map((note, index) => (
     <li key={note.id} className={className.classList}>
       <Heading className="p-2 pt-3 pb-0" text={note.title} />
       <Paragraph className="p-2 pt-0 pb-0" text={note.createdAt} />
@@ -32,6 +34,7 @@ function List({ filterInitialData, handleAddNotesArship, handleDeleteNotes }) {
           }}
           className="w-[50%] text-yellow-500 cursor-pointer hover:text-yellow-600"
           text="Arsipkan"
+          data-testid={"data-btn-" + index}
         />
       </div>
     </li>
