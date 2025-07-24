@@ -1,0 +1,3 @@
+const dataArship = [];
+
+export { dataArship };
