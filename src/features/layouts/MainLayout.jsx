@@ -5,7 +5,7 @@ import Header from "../organisms/Header";
 
 function MainLayout(props) {
   const { children, handleSearch } = props;
-  const classMain = "bg-linear-to-b from-blue-950 to-indigo-950";
+  const classMain = "bg-slate-900";
 
   return (
     <>
