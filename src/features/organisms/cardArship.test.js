@@ -13,7 +13,7 @@ test("test cek apakah card arsip ada", async () => {
   const btn_index_0 = screen.getByTestId("data-btn-0");
   fireEvent.click(btn_index_0);
   //   assert
-  const card_list = await screen.findByTestId("data-liste");
+  const card_list = await screen.findByTestId("data-list");
   expect(card_list).toBeInTheDocument();
 });
 
