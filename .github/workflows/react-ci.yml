@@ -1,0 +1,25 @@
+name: React CI cepi
+
+on: 
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    name: React Build
+    runs-on: ubuntu-latest
+
+    steps: 
+      - name: Copy all repo
+        uses: actions/checkout@v4
+    
+      - name: Install depedencies
+        run: npm install
+
+      - name: Run test
+        run: npm test
+
+      - name: Build react
+        run: npm run build
+
+      
