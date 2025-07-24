@@ -21,7 +21,7 @@ function Header({ handleSearch }) {
 
   return (
     <div className={classHeader}>
-      <Heading className={classHeading} text="Notes" />
+      <Heading className={classHeading} text="Catatan Pribadi" />
       <Input
         value={search}
         onChange={(event) => {
