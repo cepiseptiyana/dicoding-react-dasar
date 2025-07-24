@@ -1,6 +1,6 @@
 name: React CI cepi
 
-on: 
+on:
   pull_request:
     branches: [main]
 
@@ -9,15 +9,15 @@ jobs:
     name: React Build
     runs-on: ubuntu-latest
 
-    steps: 
+    steps:
       - name: Copy all repo
         uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
-        with: 
-            node-version: 20
-    
+        with:
+          node-version: 20
+
       - name: Install depedencies
         run: npm install
 
@@ -26,5 +26,3 @@ jobs:
 
       - name: Build react
         run: npm run build
-
-      

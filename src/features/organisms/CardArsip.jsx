@@ -1,3 +1,5 @@
+import React from "react";
+
 // atoms
 import Heading from "../Fragments/Heading";
 import Paragraph from "../Fragments/Paragraph";
@@ -13,7 +15,7 @@ function CardArsip({ showDataArship, handleDeleteNotesArship }) {
 
   const list = showDataArship.map((note) => {
     return (
-      <li key={note.id} className={className.classList}>
+      <li key={note.id} className={className.classList} data-testid="data-list">
         <Heading className="p-2 pt-3 pb-0" text={note.title} />
         <Paragraph className="p-2 pt-0 pb-0" text={note.createdAt} />
         <Paragraph className="p-2 pt-0" text={note.body} />
@@ -28,7 +30,10 @@ function CardArsip({ showDataArship, handleDeleteNotesArship }) {
 
   if (showDataArship.length != 0) {
     return (
-      <ul className="NotebookList--order flex xl:justify-start justify-center flex-wrap gap-3">
+      <ul
+        data-testid="arsip_list"
+        className="NotebookList--order flex xl:justify-start justify-center flex-wrap gap-3"
+      >
         {list}
       </ul>
     );
